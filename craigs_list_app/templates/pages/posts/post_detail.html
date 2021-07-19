@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block page-title %}
+Posts Detail
+{% endblock %}
+
+{% block main-content %}
+<h1>Category: {{ post.content.name }}</h1>
+<h2>Posts: {{ post.content }}</h2>
+{% endblock %}

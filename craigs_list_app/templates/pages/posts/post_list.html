@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block page-title %}
+Posts List
+{% endblock %}
+
+{% block main-content %}
+<h1>Category:</h1>
+<h2>Posts:</h2>
+<ul>
+    {% for p in post.content.all %}
+    <li><a href="{% url 'post_detail' c.id p.id %}">{{ p.content }}</a></li>
+    {% endfor %}
+</ul>
+
+<hr>
+<a href="{% url 'post_new' category.id %}"><button>Add Post</button></a>
+
+{% endblock %}

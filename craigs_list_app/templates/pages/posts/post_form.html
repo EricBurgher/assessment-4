@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+ {% block page-title %}
+ {{ action }} Post
+ {% endblock %}
+
+ {% block main-content %}
+ <h1>
+     {{ action }} Post for {{ category.name }} 
+ </h1>
+ <form method="POST">
+     {% csrf_token %}
+     <table>
+         {{ form.as_table }}
+     </table>
+     <button type=submit>{{ action }} Post</button>
+ </form>
+ {% endblock %}
